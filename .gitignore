@@ -1,3 +1,6 @@
+# Dotenv file
+.env
+
 # User-specific files
 *.rsuser
 *.suo
@@ -347,5 +350,3 @@ MigrationBackup/
 # Local bash scripts
 bash_scripts/
 
-# Dotenv file
-./.env

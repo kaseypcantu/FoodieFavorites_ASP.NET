@@ -1,0 +1,21 @@
+@page
+@model FoodieFavorites.Pages.ClientRestaurants
+
+@{
+    ViewData["Title"] = "";
+}
+
+<h1>Client Restaurants</h1>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(function() {
+          $.ajax("/api/restaurants/",
+          { method: "get"})
+          .then(function(response) {
+              console.log(response);
+          })
+        })
+    </script>
+}

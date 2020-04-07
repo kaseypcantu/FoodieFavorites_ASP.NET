@@ -1,0 +1,31 @@
+@model FoodieFavorites.Core.Restaurant
+
+<div style="margin-top: 25px; margin-bottom: 25px;" class="card">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Name</h3>
+        <div class="card-body">
+            <span>
+                <strong>Location:</strong> @Model.Location</span>
+            <span>
+                <strong>Cuisine:</strong>@Model.Cuisine</span>
+        </div>
+
+        <div class="card-footer">
+            <a class="btn btn-lg btn-default"
+               asp-page="./Detail"
+               asp-route-restaurantId="@Model.Id">
+                <i class="fa fa-search-plus"></i>
+            </a>
+            <a style="margin-left: 25px;" class="btn btn-lg btn-default"
+               asp-page="./Edit"
+               asp-route-restaurantId="@Model.Id">
+                <i class="fa fa-edit"></i>
+            </a>
+            <a style="margin-left: 25px;" class="btn btn-lg btn-default"
+               asp-page="./Delete"
+               asp-route-restaurantId="@Model.Id">
+                <i class="fa fa-trash-o"></i>
+            </a>
+        </div>
+    </div>
+</div>

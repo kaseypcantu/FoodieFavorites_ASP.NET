@@ -1,0 +1,17 @@
+@page "{restaurantId:int?}"
+
+@model FoodieFavorites.Pages.Delete
+
+@{
+    ViewData["Title"] = "Remove Restaurants";
+}
+
+<h2>Delete @Model.Restaurant.Name!?</h2>
+<div class="alert alert-danger">
+    Are you sure you want to delete <strong>@Model.Restaurant.Name</strong>?
+</div>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Yes!</button>
+    <a asp-page="./List" class="btn btn-primary">Cancel</a>
+</form>

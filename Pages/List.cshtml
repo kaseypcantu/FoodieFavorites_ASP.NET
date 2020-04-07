@@ -1,0 +1,62 @@
+﻿@page
+
+@model FoodieFavorites.Pages.ListModel
+
+@{
+    ViewData["Title"] = "Restaurant List";
+}
+
+<h1>Restaurants</h1>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm"/>
+            <span class="input-group-btn">
+                <button style="border: 1px solid lightgray;" class="btn bth-light">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+
+@* Render Partial View *@
+@foreach (var restaurant in Model.Restaurants)
+{
+    <partial name="_Summary" model="restaurant" />
+}
+
+@*  *@
+@* <table class="table"> *@
+@*     @foreach (var restaurant in Model.Restaurants) *@
+@*     { *@
+@*         <tr> *@
+@*             <td>@restaurant.Name</td> *@
+@*             <td>@restaurant.Location</td> *@
+@*             <td>@restaurant.Cuisine</td> *@
+@*             <td> *@
+@*                 <a class="btn btn-lg btn-default" *@
+@*                    asp-page="./Detail" *@
+@*                    asp-route-restaurantId="@restaurant.Id"> *@
+@*                     <i class="fa fa-search-plus"></i> *@
+@*                 </a> *@
+@*                 <a style="margin-left: 25px;" class="btn btn-lg btn-default" *@
+@*                    asp-page="./Edit" *@
+@*                    asp-route-restaurantId="@restaurant.Id"> *@
+@*                     <i class="fa fa-edit"></i> *@
+@*                 </a> *@
+@*                 <a style="margin-left: 25px;" class="btn btn-lg btn-default" *@
+@*                    asp-page="./Delete" *@
+@*                    asp-route-restaurantId="@restaurant.Id"> *@
+@*                     <i class="fa fa-trash-o"></i> *@
+@*                 </a> *@
+@*             </td> *@
+@*         </tr> *@
+@*     } *@
+@* </table> *@
+
+<a asp-page="./Edit" class="btn btn-primary">Add New</a>
+
+<div>@Model.Message</div>

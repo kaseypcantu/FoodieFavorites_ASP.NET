@@ -23,12 +23,17 @@
     </div>
     
     <div class="form-group">
-            <label asp-for="Restaurant.Cuisine"></label>
+        <label asp-for="Restaurant.Cuisine"></label>
         <select asp-for="Restaurant.Cuisine" class="form-control"
                 asp-items="Model.Cuisines">
         </select>
         <span class="text-danger" asp-validation-for="Restaurant.Cuisine"></span>
-        </div>
+    </div>
 
     <button class="btn btn-primary">Save</button>
 </form>
+
+@section Scripts
+{
+    <partial name="Shared/_ValidationScriptsPartial"/>
+}

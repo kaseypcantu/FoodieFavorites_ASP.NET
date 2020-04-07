@@ -1,3 +1,5 @@
+SET IDENTITY_INSERT Restaurants ON;
+
 INSERT INTO FoodieFavs_DB.dbo.Restaurants (Id, Name, Location, Cuisine) VALUES (1, 'The Baratie', 'The East Blue', 5);
 INSERT INTO FoodieFavs_DB.dbo.Restaurants (Id, Name, Location, Cuisine) VALUES (2, 'Apollo''s Burgers', 'Austin, Texas', 6);
 INSERT INTO FoodieFavs_DB.dbo.Restaurants (Id, Name, Location, Cuisine) VALUES (3, 'Perry''s Steakhouse', 'Houston, Texas', 6);

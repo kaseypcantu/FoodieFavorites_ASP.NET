@@ -54,7 +54,7 @@ button.accept-policy {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
+  /*position: relative;*/
   min-height: 100%;
 }
 
@@ -63,7 +63,8 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
+  position: fixed;
+  margin-top: 25px;
   bottom: 0;
   width: 100%;
   white-space: nowrap;

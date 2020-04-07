@@ -22,7 +22,7 @@ services:
       - 1433:1433
     restart: on-failure
     env_file:
-      - ../.env
+      - .env
     environment:
       ACCEPT_EULA: Y
       SA_PASSWORD: ${SA_PASSWORD}

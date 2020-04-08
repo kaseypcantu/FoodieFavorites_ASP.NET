@@ -9,7 +9,9 @@ using FoodieFavorites.Core;
 using FoodieFavorites.Data;
 
 namespace FoodieFavorites.API
-{
+{    
+    [Route("/api/Restaurants")]
+    [ApiController]
     public class RestaurantsController : Controller
     {
         private readonly FoodieFavsDbContext _context;
@@ -18,7 +20,9 @@ namespace FoodieFavorites.API
         {
             _context = context;
         }
-
+        
+        [Route("/api/Restaurants/All")]
+        [HttpGet]
         // GET: Restaurants
         public async Task<IActionResult> Index()
         {

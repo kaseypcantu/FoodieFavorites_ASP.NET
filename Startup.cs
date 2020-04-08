@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoodieFavorites.API;
 using FoodieFavorites.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -42,6 +43,10 @@ namespace FoodieFavorites
                 });
         
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
+
+            services.AddControllers();
+
+            services.AddControllersWithViews();
 
             services.AddRazorPages();
         }

@@ -7,6 +7,10 @@
 
 <h1>Client Restaurants</h1>
 
+<table class="table" id="restaurants">
+    
+</table>
+
 @section Scripts
 {
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/datatables.min.css"/>
@@ -14,10 +18,24 @@
     
     <script type="text/javascript">
         $(function() {
-          $.ajax("/api/restaurants/",
+          $.ajax("/API/Restaurants",
           { method: "get"})
           .then(function(response) {
               console.log(response);
+              $("#restaurants").dataTable({
+                data: response,
+                columns: [
+                    {
+                        "data": "name"
+                    },
+                    {
+                        "data": "location"
+                    },
+                    {
+                        "data": "cuisine"
+                    }
+                ]
+              })
           })
         })
     </script>

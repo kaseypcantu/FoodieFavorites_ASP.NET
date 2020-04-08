@@ -5,7 +5,6 @@
     <UserSecretsId>a5240f0b-cdfc-49e8-9a37-646b89b21923</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Api" />
     <Folder Include="Core\" />
     <Folder Include="Data\" />
     <Folder Include="Pages\R2\" />
